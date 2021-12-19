@@ -7,7 +7,7 @@ const people = [
     title: 'office manager',
     quote:
       'Fingerstache umami squid, kinfolk subway tile selvage tumblr man braid viral kombucha gentrify fanny pack raclette pok pok mustache.',
-  },
+  },  
   {
     id: 2,
     image:
