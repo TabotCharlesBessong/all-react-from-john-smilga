@@ -16,7 +16,7 @@ function App() {
   const [editID, setEditID] = useState(null);
   const [alert, setAlert] = useState({ show: false, msg: '', type: '' });
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     if (!name) {
       showAlert(true, 'danger', 'please enter value');
     } else if (name && isEditing) {
