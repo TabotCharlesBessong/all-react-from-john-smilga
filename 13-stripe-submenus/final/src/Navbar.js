@@ -3,7 +3,7 @@ import logo from './images/logo.svg';
 import { FaBars } from 'react-icons/fa';
 import { useGlobalContext } from './context';
 
-const Navbar = () => {
+const Navbar = () => { 
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
