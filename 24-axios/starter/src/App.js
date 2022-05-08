@@ -1,6 +1,6 @@
 import Title from './components/Title';
+import Setup from './examples/5-custom-instance'
 
-import Setup from './examples/3-post-request'
 function App() {
   return (
     <main>
