@@ -30,6 +30,7 @@
     "react-file-base64": "^1.0.3",
     "react-i18next": "^11.15.5",
     "react-icons": "^4.3.1",
+    "react-redux": "^8.0.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
     "recharts": "^2.1.9",
