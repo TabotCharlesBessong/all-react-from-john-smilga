@@ -1,4 +1,4 @@
-# This readme was written by john smilga and all the codes here are what i have learned from him related to react he is one if not the best teacher on youtube
+
 
 #### All Projects
 
