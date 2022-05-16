@@ -6,8 +6,10 @@ const initialState = {
   cardItems:cardItems,
   amount:2,
   total:0,
-  isLoading:true
+  isLoading:false
 }
+
+
 
 const cardSlice = createSlice({
   name:'card',
@@ -43,4 +45,5 @@ const cardSlice = createSlice({
 
 // console.log(cardSlice)
 export const {clearCard , decrease , increase , removeItem , calculateTotals} = cardSlice.actions
-export default cardSlice.reducer
+export default cardSlice.reducer 
+// export default modalSlice.reducer
