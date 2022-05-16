@@ -1,12 +1,4 @@
-# React Projects
-
-#### Support
-
-Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
-
-#### Tutorial Video
-
-(React Tutorial)[https://youtu.be/iZhV0bILFb0]
+# This readme was written by john smilga and all the codes here are what i have learned from him related to react he is one if not the best teacher on youtube
 
 #### All Projects
 
@@ -72,9 +64,7 @@ axios tutorial section
 
 [My React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
 
-#### Support
 
-Find the App Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
 
 #### Docs
 
