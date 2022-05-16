@@ -1,4 +1,4 @@
-const cartItems = [
+const cardItems = [
   {
     id: 'rec1JZlfCIBOPdcT2',
     title: 'Samsung Galaxy S8',
@@ -29,4 +29,4 @@ const cartItems = [
   },
 ];
 
-export default cartItems;
+export default cardItems;
