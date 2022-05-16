@@ -1,4 +1,12 @@
- function App() {
-  return <h2>Redux Toolkit</h2>;
+import React from 'react'
+import Navbar from './components/Navbar'
+
+const App = () => {
+  return (
+    <main>
+      <Navbar/>
+    </main>
+  )
 }
-export default App;
+
+export default App
