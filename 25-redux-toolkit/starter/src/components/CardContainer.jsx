@@ -1,9 +1,11 @@
 
 import React from 'react'
 import CardItem from './CardItem'
-import { useSelector } from 'react-redux'
+import { useSelector , useDispatch } from 'react-redux'
+import { clearCard } from '../features/card/CardSlice'
 
 const CardContainer = () => {
+  const dispatch = useDispatch()
   const {cardItems,total , amount} = useSelector((store)=> store.card )
 
   if(amount < 1){
@@ -32,10 +34,10 @@ const CardContainer = () => {
       <footer>
         <hr />
         <div className="cart-total">
-          <h4>total <span> ${total} </span> </h4>
+          <h4>total <span> ${total.toFixed(2)} </span> </h4>
           
         </div>
-        <button className="btn clear-btn">clear cart</button>
+        <button onClick={()=> dispatch(clearCard()) } className="btn clear-btn">clear cart</button>
       </footer>
     </section>
   )
