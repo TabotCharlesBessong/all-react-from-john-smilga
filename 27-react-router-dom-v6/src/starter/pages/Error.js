@@ -1,8 +1,8 @@
-const Home = () => {
+const Error = () => {
   return (
     <section className='section'>
-      <h2>home page</h2>
+      <h2>Error</h2>
     </section>
   );
 };
-export default Home;
+export default Error;
