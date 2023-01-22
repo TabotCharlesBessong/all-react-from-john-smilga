@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import data from './constant/data'
 import List from './List'
+import {Wrapper,Button} from './App.styles'
 
 export type BirthdayType = {
   id: number;
@@ -12,13 +13,13 @@ export type BirthdayType = {
 const App = () => {
   const [people,setPeople] = useState(data as BirthdayType[])
   return (
-    <main>
-      <section>
+    <Wrapper>
+      <div className='container'>
         <h3>{people.length} Birthday Today</h3>
         <List people={people} />
-        <button onClick={()=> setPeople([])} >Clear All</button>
-      </section>
-    </main>
+        <Button onClick={()=> setPeople([])} >Clear All</Button>
+      </div>
+    </Wrapper>
   )
 }
 
