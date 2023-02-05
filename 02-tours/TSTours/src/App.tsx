@@ -1,38 +1,60 @@
-import React,{useState} from 'react'
-import {Wrapper,Button} from './App.styles'
-import { useQuery } from 'react-query';
-import { LinearProgress, Grid } from '@material-ui/core';
+import React ,{useState,useEffect} from 'react'
+import Loading from './Loading'
+import Tours from './Tour'
 
-export type TourType = {
-  id: number;
-  image: string;
-  info:string;
-  price:number;
-  name: string;
-};
+const url:String = 'https://course-api.com/react-tours-project'
 
-const getTours = async (): Promise<TourType> => await(await fetch('https://course-api.com/react-tours-project')).json()
-
-const App = () => {
+const App:React.FC = () => {
   const [loading,setLoading] = useState(true)
-  const [tours,setTours] = useState([] as TourType[])
-  const {data,isLoading,error} = useQuery<TourType[]>(
-    'tours',
-    getTours
-  )
-  console.log(data)
+  const [tours,setTours] = useState([])
 
-  const removeTours = (id:number)=>{
-    const newTours = tours.filter((tour)=>
+  const removeTours = (id:Number)=>{
+    const newTours = tours.filter((tour:Object)=>
       tour.id !== id
     )
     setTours(newTours)
   }
-  return (
-    <Wrapper>
-      <h1>Hello my world</h1>
-    </Wrapper>
-  )
+  const fetchTours = async () =>{
+    setLoading(true)
+    try {
+      const response = await fetch(url)
+      const tours = await response.json()
+      setLoading(false)
+      setTours(tours)
+    } catch (error) {
+      setLoading(false)
+
+      console.log(error);
+    }
+    console.log(tours);
+  }
+
+  useEffect(()=>{
+    fetchTours()
+  },[])
+
+  if(loading){
+    return (
+      <main>
+        <Loading />
+      </main>
+    )
+  }
+  if(tours.length === 0 ){
+    return (
+      <main>
+        <div className="title">
+          <h2>No tours left</h2>
+          <button className='btn' onClick={()=> fetchTours()} > refresh</button>
+        </div>
+      </main>
+    )
+  }
+  return <>
+  <main>
+    <Tours tours={tours} removeTours={removeTours} />
+  </main>
+  </>
 }
 
 export default App
